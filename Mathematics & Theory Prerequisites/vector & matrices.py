@@ -9,6 +9,9 @@ v2 = np.array([4,5,6])
 dot_product = np.dot(v1,v2)
 print(dot_product)  # Output: 32
 
+cross_product = np.cross(v1, v2)
+print(cross_product)
+
 scaler_multiplication = v1 * 2
 print(scaler_multiplication) # Output: [2 4 6]
 
