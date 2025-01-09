@@ -4,9 +4,6 @@
 - [1. Vectors](#1-vectors)
 - [2. Matrices](#2-matrices)
 - [3. Linear Transformations](#3-linear-transformations)
-- [4. Linear Equations](#4-linear-equations)
-- [5. Linear Programming](#5-linear-programming)
-- [6. Advanced Linear Algebra Concepts](#6-advanced-linear-algebra-concepts)
 
 ## 1. Vectors
 ### Dot Product (Scalar Product)
@@ -121,90 +118,15 @@ scaled_point = scaling_matrix(2, 3) @ point
 
 For more detailed explanations of transformations, visit [Cuemath's transformation guide](https://www.cuemath.com/geometry/transformations/).
 
-## 4. Linear Equations
-
-### Solving Linear Equations
-```python
-# Solving system of linear equations: Ax = b
-A = np.array([[1, 2], [3, 4]])
-b = np.array([5, 6])
-
-# Solve using NumPy
-x = np.linalg.solve(A, b)
-print("Solution to the system:")
-print(x)
-
-# Check consistency
-is_consistent = np.allclose(A @ x, b)
-print(f"Is solution consistent? {is_consistent}")
-```
-
-## 5. Linear Programming
-
-### Example Problem
-```python
-from scipy.optimize import linprog
-
-# Minimize: c^T * x
-# Subject to: A_ub * x <= b_ub
-#            A_eq * x == b_eq
-
-c = [-1, -1]  # Coefficients of objective function
-A_ub = [[1, 1]]  # Coefficients of inequalities
-b_ub = [10]  # Constants of inequalities
-
-result = linprog(c, A_ub=A_ub, b_ub=b_ub)
-print("Optimal solution:")
-print(result.x)
-```
-
-## 6. Advanced Linear Algebra Concepts
-
-### Vector Spaces and Linear Independence
-```python
-def is_linearly_independent(vectors):
-    """Check if vectors are linearly independent"""
-    matrix = np.array(vectors)
-    rank = np.linalg.matrix_rank(matrix)
-    return rank == len(vectors)
-
-# Example vectors
-vectors = [
-    [1, 0, 0],
-    [0, 1, 0],
-    [0, 0, 1]
-]
-
-print(f"Vectors are linearly independent: {is_linearly_independent(vectors)}")
-```
-
-### Orthogonality and Orthonormality
-```python
-def is_orthogonal(v1, v2):
-    """Check if two vectors are orthogonal"""
-    return np.abs(np.dot(v1, v2)) < 1e-10
-
-def normalize(v):
-    """Normalize a vector"""
-    return v / np.linalg.norm(v)
-
-# Example
-v1 = np.array([1, 0, 0])
-v2 = np.array([0, 1, 0])
-
-print(f"Vectors are orthogonal: {is_orthogonal(v1, v2)}")
-print(f"Normalized v1: {normalize(v1)}")
-```
 
 ## Practice Exercises
 1. Implement vector operations without using NumPy
 2. Create a function to perform matrix multiplication from scratch
-3. Solve a system of linear equations using different methods
-4. Implement a linear transformation that combines rotation and scaling
+3. Implement a linear transformation that combines rotation and scaling
 
 ## Additional Resources
 - [Interactive Linear Algebra Visualizations](https://github.com/3b1b/manim)
 - [MIT OpenCourseWare: Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/)
 - [Khan Academy: Linear Algebra](https://www.khanacademy.org/math/linear-algebra)
 
-[← Back to Mathematics](../README.md) | [← Back to Main](../../README.md)
+[← Back to Mathematics](../README.md) | [← Back to Main](../../README.md)np
