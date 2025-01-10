@@ -129,4 +129,4 @@ For more detailed explanations of transformations, visit [Cuemath's transformati
 - [MIT OpenCourseWare: Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/)
 - [Khan Academy: Linear Algebra](https://www.khanacademy.org/math/linear-algebra)
 
-[← Back to Mathematics](../README.md) | [← Back to Main](../../README.md)np
+[← Back to Mathematics](./README.md) | [← Back to Main](../../README.md)
