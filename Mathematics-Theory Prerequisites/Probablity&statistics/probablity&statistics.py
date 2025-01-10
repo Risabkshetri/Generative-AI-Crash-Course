@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import random
 
 # statistics
 
@@ -58,3 +59,19 @@ plt.xlabel('Value')
 plt.ylabel('Frequency')
 plt.legend()
 plt.show()
+
+
+#probability calculation
+# Simulate flipping a coin
+trials = 100000
+success = 0
+
+# Run the trials
+for _ in range(trials):
+    toss = random.choice(['Heads', 'Tails'])
+    if toss == 'Heads':
+        success += 1
+
+# Probability calculation
+probability = success / trials
+print(f"Probability of getting Heads: {probability:.4f}")
